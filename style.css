@@ -1,0 +1,150 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+*{
+   margin: 0;
+   padding: 0;
+   box-size: border-box;
+}
+header{
+    background-color: white;
+    color:black;
+    font-family: monospace;
+    text-align: center;
+    padding: 2px;
+    margin: 2px auto;
+}
+body{
+    background-color: black;
+    color:white;
+    font-family: monospace;
+}
+.scoreBoard{
+    border: 3px solid white;
+    border-radius: 5px;
+    padding: 2px;
+    margin: 15px auto;
+    width: 300px;
+    height:100px;
+    text-align: center;
+    font-size: 25px;
+    position: relative; 
+}
+.userName{
+    background-color: red;
+    color: white;
+    width: 110px;
+    height: 35px;
+    position: absolute;
+    top:33px;
+    left:-56px;
+    padding: 2px;
+}
+.computerName{
+    background-color: red;
+    color: white;
+    width: 110px;
+    height: 35px;
+    position: absolute;
+    top:33px;
+    right:-56px;
+    padding:2px;
+}
+.userScore{
+    font-size: 70px;
+    padding: 1px;
+}
+
+.computerScore{
+    font-size: 70px;
+    padding: 1px;
+}
+
+p{
+    font-size: 20px;
+    text-align: center;
+}
+
+.choicesBat{
+    font-size: 75px;
+    text-align: center;
+    margin:40px auto;
+    padding: 5px;
+   
+}
+#text{
+    font-size: 20px;
+    display: inline;
+    text-align: left;
+
+}
+.choicesBall{
+    font-size: 75px;
+    text-align: center;
+    margin:40px auto;
+    padding: 5px;
+   
+}
+.choice{
+    display: inline;
+    border:3px solid white;
+    border-radius: 50%;
+    padding: 8px;
+    transition: all 0.3s ease;
+}
+.choice:hover{
+    cursor: pointer;
+    background-color: lawngreen;
+    color:black;
+}
+
+.myBtn{
+    text-align: center;
+    left: 50%;
+}
+
+button{
+    background-color: red;
+    font-size: 20px;
+    font-weight: bold;
+    color:white;
+    margin:  10px auto;
+    padding: 2px;
+    width: 70px;
+    height: 30px;
+}
+
+#demo{
+    font-size: 25px;
+    font-weight: bold;
+    color:rgb(247, 12, 12);
+}
+
+#demo1{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#demo2{
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(62, 233, 47);
+}
+
+#demo3{
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+
+#demo4{
+    font-size: 20px;
+    color:rgb(37, 216, 240);
+}
+
+#demo5{
+    font-size: 20px;
+    color:rgb(37, 216, 240);
+}
+
+
+ 
