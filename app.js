@@ -24,13 +24,35 @@ const displayM = document.getElementById("demo2");
 const displayO = document.getElementById("demo3");
 const banner = document.getElementById("demo4");
 const banner_two = document.getElementById("demo5");
-const off = document.querySelector(".choicesBat");
+const off = document.querySelector(".none");
 
 //jquery
 
 $(document).ready(function(){
     $("#myBtn").click(function(){
-        $("button").hide();
+        $("#text1").append("YOU BATTING:");
+        $("#emoji1").append(" &#127951;");
+        $("#zero").append("0");
+        $("#one").append("1");
+        $("#two").append("2");
+        $("#three").append("3");
+        $("#four").append("4");
+        $("#five").append("5");
+        $("#six").append("6");
+        $("#text2").append("YOU BOWLING:");
+        $("#emoji2").append("&#9918;");
+        $("#zeroball").append("0");
+        $("#oneball").append("1");
+        $("#twoball").append("2");
+        $("#threeball").append("3");
+        $("#fourball").append("4");
+        $("#fiveball").append("5");
+        $("#sixball").append("6");
+        $("#demo4").append("Click on the RUNS to hit that shot.");
+        $("#demo5").append("Click on the BALL to bowl that ball.");
+        $("#myBtn2").hide();
+        $("#demo7").hide();
+        $("#myBtn").hide();
         $("#demo6").append("Match Started.Now score runs to set a target.").fadeOut(6000);
     })
 })
@@ -88,12 +110,15 @@ function winBowl(computer_run,userball){
 function loseBowl(neededRun,comphit,userball){
     banner_two.innerHTML = "Bot hit " + comphit + " || You bowled " +userball;
     displayM.innerHTML ="BOT OUT!";
-    if(userCurrent_score === neededRun){
-        displayO.innerHTML = "ITS DRAW!"
-    }
-    else (userCurrent_score > neededRun)
+    if(userCurrent_score === neededRun)
     {
-        displayO.innerHTML = "WON!! YOU BEATS BOT !"
+        console.log(neededRun);
+        displayO.innerHTML = "ITS DRAW!!";
+    }
+    else if(userCurrent_score > neededRun)
+    {
+        console.log(neededRun);
+        displayO.innerHTML = "WON!! YOU BEATS BOT !";
     }
     fade_two();
    
@@ -159,7 +184,23 @@ function gameBowl(shot){
 //batting
 
 function myStart(){
-    
+        
+        zero_shot.classList.add("choice");
+        one_shot.classList.add("choice");
+        two_shot.classList.add("choice");
+        three_shot.classList.add("choice");
+        four_shot.classList.add("choice");
+        five_shot.classList.add("choice");
+        six_shot.classList.add("choice");
+
+        zero_ball.classList.add("choice");
+        one_ball.classList.add("choice");
+        two_ball.classList.add("choice");
+        three_ball.classList.add("choice");
+        four_ball.classList.add("choice");
+        five_ball.classList.add("choice");
+        six_ball.classList.add("choice");
+
          zero_shot.addEventListener('click', function(){ 
              gameBat(0);
          })
@@ -194,6 +235,8 @@ function myStart(){
 
 function bowling(){
 
+        
+
     zero_ball.addEventListener('click', function(){ 
         gameBowl(0);
     })
@@ -221,6 +264,280 @@ function bowling(){
    six_ball.addEventListener('click', function(){ 
        gameBowl(6);
    })
+
+}
+
+
+
+
+//hide function
+
+function fade(){
+    $(document).ready(function(){
+        $(".choicesBat").mouseover(function(){
+            $(this).hide();
+        })
+    })
+
+
+}
+
+//hide 2nd func
+
+function fade_two(){
+    $(document).ready(function(){
+        $(".choicesBall").mouseover(function(){
+            $(this).hide();
+        })
+    })
+
+}
+
+//----------------------------------------------------------------------------------------------------
+
+
+$(document).ready(function(){
+    $("#myBtn2").click(function(){
+        $("#text1").append("YOU BOWLING:");
+        $("#emoji1").append("&#9918;");
+        $("#zero").append("0");
+        $("#one").append("1");
+        $("#two").append("2");
+        $("#three").append("3");
+        $("#four").append("4");
+        $("#five").append("5");
+        $("#six").append("6");
+        $("#text2").append("YOU BATTING:");
+        $("#emoji2").append(" &#127951;");
+        $("#zeroball").append("0");
+        $("#oneball").append("1");
+        $("#twoball").append("2");
+        $("#threeball").append("3");
+        $("#fourball").append("4");
+        $("#fiveball").append("5");
+        $("#sixball").append("6");
+        $("#demo4").append("Click on the BALL to bowl that ball.");
+        $("#demo5").append("Click on the RUNS to hit that shot.");
+        $("#myBtn").hide();
+        $("#demo7").hide();
+        $("#myBtn2").hide();
+        $("#demo6").append("Match Started.Now try to out him earlier and chase the target.").fadeOut(6000);
+    })
+})
+
+
+
+
+
+//user win
+
+function winBat2(computer_run,userball){
+    compCurrent_score = compCurrent_score + computer_run ;
+    computerScore.innerHTML = compCurrent_score;
+    banner.innerHTML= "Bot hit " + computer_run+ " || You bowled " +userball;
+
+
+    console.log("Score: " +compCurrent_score);
+}
+
+//userlose
+
+function loseBat2(target,comphit,userball){
+    banner.innerHTML = "Bot hit " + comphit + " || You bowled " +userball;
+    display.innerHTML = "BOT OUT !";
+    displayN.innerHTML = "Target is: " +target;
+    fade();
+    
+    batting();
+   
+
+}
+
+//comp win
+
+function winBowl2(user_run,compball){
+    userCurrent_score = userCurrent_score + user_run;
+    userScore.innerHTML = userCurrent_score+":";
+    banner_two.innerHTML = "You hit " + user_run + " || Bot bowled " +compball;
+
+    
+    
+    if(userCurrent_score > compCurrent_score)
+    {
+        displayO.innerHTML = "WON! YOU BEATS BOT !";
+        fade_two();
+    }
+   
+   
+    console.log("Score: " +userCurrent_score);
+
+}
+
+//comp lose
+
+function loseBowl2(neededRun,userhit,compball){
+    banner_two.innerHTML = "You hit " + userhit + " || Bot bowled " +compball;
+    displayM.innerHTML ="YOU OUT!";
+    if(compCurrent_score === neededRun)
+    {
+        console.log(neededRun);
+        displayO.innerHTML = "ITS DRAW!!";
+    }
+    else if(compCurrent_score > neededRun)
+    {
+        console.log(neededRun);
+        displayO.innerHTML = "LOSE! BOT BEATS YOU !";
+    }
+    fade_two();
+   
+
+}
+
+
+
+
+//computershot
+
+function computerShot2(){
+    var result=Math.floor(Math.random()*7);
+    return result;
+}
+
+
+
+
+//userbat
+
+function gameBat2(ball){
+    var computerChoice = computerShot2();
+    var userChoice = ball;
+    if(computerChoice === userChoice){
+        loseBat2(compCurrent_score,computerChoice,userChoice);
+    }
+    else{
+        winBat2(computerChoice,userChoice);
+    }
+
+    console.log("bot run is" + computerChoice);
+    console.log("your ball is "+userChoice);
+}
+
+//compbat
+
+function gameBowl2(shot){
+    var computerChoice = computerShot();
+    var userChoice = shot;
+    if(userChoice === computerChoice){
+       loseBowl2(userCurrent_score,userChoice,computerChoice);
+    }
+    else{
+        winBowl2(userChoice,computerChoice);
+    }
+
+    console.log(" user run is" + userChoice);
+    console.log("bot ball is "+computerChoice);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+//compbatting
+
+function myNew(){
+     
+        zero_shot.classList.add("choice");
+        one_shot.classList.add("choice");
+        two_shot.classList.add("choice");
+        three_shot.classList.add("choice");
+        four_shot.classList.add("choice");
+        five_shot.classList.add("choice");
+        six_shot.classList.add("choice");
+
+        zero_ball.classList.add("choice");
+        one_ball.classList.add("choice");
+        two_ball.classList.add("choice");
+        three_ball.classList.add("choice");
+        four_ball.classList.add("choice");
+        five_ball.classList.add("choice");
+        six_ball.classList.add("choice");
+
+    zero_shot.addEventListener('click', function(){ 
+        gameBat2(0);
+    })
+
+    one_shot.addEventListener('click', function(){ 
+       gameBat2(1);
+   })
+
+   two_shot.addEventListener('click', function(){ 
+       gameBat2(2);
+   })
+
+   three_shot.addEventListener('click', function(){ 
+       gameBat2(3);
+   })
+
+   four_shot.addEventListener('click', function(){ 
+       gameBat2(4);
+   })
+
+   five_shot.addEventListener('click', function(){ 
+       gameBat2(5);
+   })
+
+   six_shot.addEventListener('click', function(){ 
+       gameBat2(6);
+   })
+
+        
+   
+        
+ }
+
+//batting
+
+function batting(){
+
+    zero_ball.addEventListener('click', function(){ 
+        gameBowl2(0);
+    })
+
+    one_ball.addEventListener('click', function(){ 
+       gameBowl2(1);
+   })
+
+   two_ball.addEventListener('click', function(){ 
+       gameBowl2(2);
+   })
+
+   three_ball.addEventListener('click', function(){ 
+       gameBowl2(3);
+   })
+
+   four_ball.addEventListener('click', function(){ 
+       gameBowl2(4);
+   })
+
+   five_ball.addEventListener('click', function(){ 
+       gameBowl2(5);
+   })
+
+   six_ball.addEventListener('click', function(){ 
+       gameBowl2(6);
+   })
+    
+
+   
+
+    
 
 }
 
