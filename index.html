@@ -5,58 +5,65 @@
   <title>Hand Cricket</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   
 
 </head>
 <body>
     <header>
-        <h1>HAND CRICKET.</h1>
+        <h1>HAND CRICKET.<span>&#127951;</span></h1>
     </header>
     <div class="scoreBoard">
         <div class="userName">User</div>
         <div class="computerName">Bot</div>
         <span class="userScore">0:</span><span class="computerScore">0</span>
     </div>
-    <p id = "demo4">Click on the RUNS to hit that shot.</p>
+    <p id = "demo4"></p>
     
     <div  class="choicesBat">
-        <div id="text">BATTING:</div>
-        <div class="choice" id="zero">0</div>
-        <div class="choice" id="one">1</div> 
-        <div class="choice" id="two">2</div>
-        <div class="choice" id="three">3</div>
-        <div class="choice" id="four">4</div>
-        <div class="choice" id="five">5</div>
-        <div class="choice" id="six">6</div>
+        <div  id="text1">    <span id="emoji1" style="font-size: 50px;"></span></div>
+        <div  id="zero"></div>
+        <div  id="one"></div> 
+        <div  id="two"></div>
+        <div  id="three"></div>
+        <div  id="four"></div>
+        <div  id="five"></div>
+        <div  id="six"></div>
     </div>
+
     <div>   
         <p id="demo"></p>
         <p id="demo1"></p>
     </div>
-    <p id="demo5">Click on the BALL to bowl that ball.</p>
+    <p id="demo5"></p>
     
     <div class="choicesBall">
-        <div id="text">BOWLING:</div>
-        <div class="choice" id="zeroball">0</div>
-        <div class="choice" id="oneball">1</div> 
-        <div class="choice" id="twoball">2</div>
-        <div class="choice" id="threeball">3</div>
-        <div class="choice" id="fourball">4</div>
-        <div class="choice" id="fiveball">5</div>
-        <div class="choice" id="sixball">6</div>
+        <div  id="text2"> <span id="emoji2" style="font-size: 50px;"></span></div>
+        <div  id="zeroball"></div>
+        <div  id="oneball"></div> 
+        <div  id="twoball"></div>
+        <div  id="threeball"></div>
+        <div  id="fourball"></div>
+        <div  id="fiveball"></div>
+        <div  id="sixball"></div>
+    
     </div>
+
+
     <div>   
         <p id="demo2"></p>
         <p id="demo3"></p>
     </div>
-    <button class="haha" id="myBtn" onclick="myStart()">START</button>
+    <button class="haha" id="myBtn"  onclick="myStart()">BATTING</button>
+    <p id="demo7">OR</p>
+    <button class="haha2" id="myBtn2" onclick="myNew()">BOWLING</button>
+
     <p id="demo6"></p>
     
     
-   
-    <script src="app.js"  charset="utf-8">
+    
+    <script src="app.js"  charset="utf-8"></script>
+
         
-        
-    </script>
-</body>
+    </body>
 </html>
