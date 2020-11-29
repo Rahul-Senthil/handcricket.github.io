@@ -30,7 +30,6 @@ const off = document.querySelector(".none");
 
 $(document).ready(function(){
     $("#myBtn").click(function(){
-        $("#text1").append("YOU BATTING:");
         $("#emoji1").append(" &#127951;");
         $("#zero").append("0");
         $("#one").append("1");
@@ -39,7 +38,6 @@ $(document).ready(function(){
         $("#four").append("4");
         $("#five").append("5");
         $("#six").append("6");
-        $("#text2").append("YOU BOWLING:");
         $("#emoji2").append("&#9918;");
         $("#zeroball").append("0");
         $("#oneball").append("1");
@@ -298,7 +296,6 @@ function fade_two(){
 
 $(document).ready(function(){
     $("#myBtn2").click(function(){
-        $("#text1").append("YOU BOWLING:");
         $("#emoji1").append("&#9918;");
         $("#zero").append("0");
         $("#one").append("1");
@@ -307,7 +304,6 @@ $(document).ready(function(){
         $("#four").append("4");
         $("#five").append("5");
         $("#six").append("6");
-        $("#text2").append("YOU BATTING:");
         $("#emoji2").append(" &#127951;");
         $("#zeroball").append("0");
         $("#oneball").append("1");
